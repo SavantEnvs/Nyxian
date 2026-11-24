@@ -1,0 +1,4 @@
+out/
+fuzz_*
+!fuzz_*.c
+!fuzz_*.cpp

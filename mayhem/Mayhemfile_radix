@@ -1,0 +1,9 @@
+project: savantenvs/Nyxian
+target: radix
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/radix/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_radix
+    libfuzzer: true
+    timeout: 10

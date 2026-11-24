@@ -1,0 +1,9 @@
+project: savantenvs/Nyxian
+target: nxt2_read
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nxt2_read/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_nxt2_read
+    libfuzzer: true
+    timeout: 10

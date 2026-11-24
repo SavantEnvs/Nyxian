@@ -1,0 +1,9 @@
+project: savantenvs/Nyxian
+target: zsign_plist
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zsign_plist/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_zsign_plist
+    libfuzzer: true
+    timeout: 10

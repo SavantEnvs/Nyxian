@@ -1,0 +1,9 @@
+project: savantenvs/Nyxian
+target: zsign_json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/zsign_json/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_zsign_json
+    libfuzzer: true
+    timeout: 10
